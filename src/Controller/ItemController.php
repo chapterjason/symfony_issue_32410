@@ -57,9 +57,17 @@ class ItemController extends AbstractController
             ]
         ]);
 
-        // Root errors
+        // Root errors only
+        dump("root error");
         $errors = $form->getErrors(false, false);
         foreach ($errors as $error) {
+            dump($error);
+        }
+
+        dump("property error");
+        # Property errors for itemCategories
+        $propertyErrors = $form->get('itemCategories')->getErrors();
+        foreach ($propertyErrors as $error) {
             dump($error);
         }
 

@@ -3,7 +3,6 @@
 namespace App\Form;
 
 use App\Entity\Item;
-use App\Form\Type\PodcastCategoryType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -25,7 +24,7 @@ class ItemType extends AbstractType
                     'by_reference' => false,
                 ]
             )
-            ->add('submit',SubmitType::class);
+            ->add('submit', SubmitType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)
